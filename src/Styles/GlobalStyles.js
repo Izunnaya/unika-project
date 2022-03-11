@@ -15,7 +15,9 @@ const GlobalStyle = createGlobalStyle`
 
 :root {
 --Navbar-bg-color: #363940;
---bg-slider-1: url(/images/slider-bg.jpg);
+--Letter-spacing-sm: 1.5px;
+--Word-spacing-sm: 3px;
+--Mg-b-sm: 5px;
 }
 
 *{

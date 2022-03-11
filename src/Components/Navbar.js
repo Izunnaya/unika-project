@@ -22,19 +22,24 @@ function Navbar() {
 }
 
 const NavbarStyled = styled.nav`
-  height: 80px;
+  height: 70px;
   width: 100%;
   background-color: var(--Navbar-bg-color);
+  position: fixed;
+
   
 `;
 const NavbarContent = styled.div`
 
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 30px 20px;
+  padding: 25px 7rem;
   width: 100%;
-  font-weight:700;
+  font-weight:500;
+  font-size: .95rem;
+  word-spacing: var(--Word-spacing-sm);
+  font-family: 'Roboto', sans-serif;
 
 `;
 const NavRight = styled.div`
@@ -46,7 +51,13 @@ const NavRight = styled.div`
     padding: 10px;
     opacity: .5;
 
-   
+    //Styling for the first item on the right nav-links
+    &:first-of-type{
+      color: #f1f1f1;
+    opacity: 100;
+    }
+    
+   //styling for the hover on the right nav-links
     &:hover {
       opacity: 5;
       color: #f1f1f1;
