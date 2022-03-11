@@ -6,5 +6,7 @@ function About() {
     <div>About</div>
   )
 }
+const AboutStyled = styled.div`
 
+`
 export default About
