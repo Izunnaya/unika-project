@@ -8,7 +8,7 @@ function Section() {
       <HeroInfo>
         <h2>I'm unika</h2>
         <p>One page responsive theme</p>
-        <a href="#">view more!</a>
+        <a href="https://www.google.com">view more!</a>
       </HeroInfo>
     </Wrap>
   );

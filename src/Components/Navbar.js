@@ -8,13 +8,13 @@ function Navbar() {
         <Logo>Logo</Logo>
 
         <NavRight>
-          <a href="/Home">Home</a>
-          <a href="/About">About</a>
-          <a href="/Services">Services</a>
-          <a href="/Works">Works</a>
-          <a href="/Teams">Team</a>
-          <a href="/Prices">Prices</a>
-          <a href="/Contact">Contact</a>
+          <a href="https://www.google.com">Home</a>
+          <a href="https://www.google.com">About</a>
+          <a href="https://www.google.com">Services</a>
+          <a href="https://www.google.com">Works</a>
+          <a href="https://www.google.com">Team</a>
+          <a href="https://www.google.com">Prices</a>
+          <a href="https://www.google.com">Contact</a>
         </NavRight>
       </NavbarContent>
     </NavbarStyled>
