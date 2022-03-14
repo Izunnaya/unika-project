@@ -3,10 +3,10 @@ import styled from 'styled-components'
 
 function About() {
   return (
-    <div>About</div>
+    <AboutStyled></AboutStyled>
   )
 }
 const AboutStyled = styled.div`
-
+margin: 20px 100px;
 `
 export default About
