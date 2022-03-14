@@ -8,13 +8,13 @@ function Navbar() {
         <Logo>Logo</Logo>
 
         <NavRight>
-          <a href="">Home</a>
-          <a href="">About</a>
-          <a href="">Services</a>
-          <a href="">Works</a>
-          <a href="">Team</a>
-          <a href="">Prices</a>
-          <a href="">Contact</a>
+          <a href="/Home">Home</a>
+          <a href="/About">About</a>
+          <a href="/Services">Services</a>
+          <a href="/Works">Works</a>
+          <a href="/Teams">Team</a>
+          <a href="/Prices">Prices</a>
+          <a href="/Contact">Contact</a>
         </NavRight>
       </NavbarContent>
     </NavbarStyled>
