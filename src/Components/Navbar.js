@@ -26,42 +26,37 @@ const NavbarStyled = styled.nav`
   width: 100%;
   background-color: var(--Navbar-bg-color);
   position: fixed;
-
-  
 `;
 const NavbarContent = styled.div`
-
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 7rem;
   width: 100%;
-  font-weight:500;
-  font-size: .95rem;
+  font-weight: 500;
+  font-size: 0.95rem;
   word-spacing: var(--Word-spacing-sm);
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Roboto", sans-serif;
 `;
 const NavRight = styled.div`
   text-decoration: none;
   text-transform: uppercase;
-
   a {
     color: #f1f1f1;
     padding: 10px;
-    opacity: .5;
+    opacity: 0.5;
 
     //Styling for the first item on the right nav-links
-    &:first-of-type{
+    &:first-of-type {
       color: #f1f1f1;
-    opacity: 100;
+      opacity: 100;
     }
-    
-   //styling for the hover on the right nav-links
+
+    //styling for the hover on the right nav-links
     &:hover {
       opacity: 5;
       color: #f1f1f1;
-      transition: .3s;
+      transition: 0.3s;
     }
   }
 `;

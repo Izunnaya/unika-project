@@ -35,6 +35,7 @@ const HeroInfo = styled.div`
   color: white;
   font-family: "Lato", sans-serif;
   font-weight: 500;
+  position: absolute;
 
   h2 {
     font-size: 3.2rem;
@@ -57,9 +58,7 @@ const HeroInfo = styled.div`
     margin-top: 50px;
     transform: translateZ(0);
     overflow: hidden;
-      transition: 1s;
-     
-     
+    transition: 1s;
 
     &:hover {
       background-color: #f1f1f1;
