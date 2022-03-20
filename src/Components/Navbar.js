@@ -37,6 +37,7 @@ const NavbarContent = styled.div`
   font-size: 0.95rem;
   word-spacing: var(--Word-spacing-sm);
   font-family: "Roboto", sans-serif;
+  cursor: pointer;
 `;
 const NavRight = styled.div`
   text-decoration: none;
