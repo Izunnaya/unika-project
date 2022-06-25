@@ -26,6 +26,7 @@ const NavbarStyled = styled.nav`
   width: 100%;
   background-color: var(--Navbar-bg-color);
   position: fixed;
+  z-index: 99;
 `;
 const NavbarContent = styled.div`
   display: flex;

@@ -1,19 +1,26 @@
-import React from "react";
+import { React } from "react";
 import styled from "styled-components";
 
-function MainAbtcard(props) {
+const MainAbtcard = ({ aboutUsInfo }) => {
+  // const aboutUsInfo = props.aboutUsInfo;
   return (
     <MainAbtCardsStyle>
       <MainAbtcards>
-        <i className="fa-solid fa-diamond"></i>
-        <div className="CardMessage">
-          <h2>{props.title}</h2>
-          <p>{props.paragraph}</p>
-        </div>
+        {aboutUsInfo.map((eachInfo) => {
+          return (
+            <>
+              <i className="fa-solid fa-diamond"></i>;
+              <div className="CardMessage" key={eachInfo.id}>
+                <h2>{eachInfo.title}</h2>
+                <p>{eachInfo.paragraph}</p>
+              </div>
+            </>
+          );
+        })}
       </MainAbtcards>
     </MainAbtCardsStyle>
   );
-}
+};
 const MainAbtCardsStyle = styled.div`
   .fa-diamond {
     font-size: 50px;
@@ -26,7 +33,7 @@ const MainAbtCardsStyle = styled.div`
   }
 `;
 const MainAbtcards = styled.div`
-  width: 300px;
+  width: 100%;
   display: flex;
   justify-content: center;
   opacity: 0.7;

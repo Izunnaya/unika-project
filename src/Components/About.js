@@ -1,40 +1,11 @@
-import React from "react";
+import { React, useState } from "react";
 import styled from "styled-components";
 import imageDivider from "./images/devider.png";
 import MainAbtcard from "./MainAbtcard";
-const AboutData = [
-  {
-    title: "Who we are",
+import { data } from "../../src/AboutUsData";
 
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae impedit nesciunt laboriosam. Deserunt a molestias nihil commodi, molestiae fugit facilis",
-
-    exp1: "First",
-  },
-  {
-    title: "What we do",
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae impedit nesciunt laboriosam. Deserunt a molestias nihil commodi, molestiae fugit facilis",
-
-    exp1: "second",
-  },
-  {
-    title: "Why we it ",
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae impedit nesciunt laboriosam. Deserunt a molestias nihil commodi, molestiae fugit facilis",
-
-    exp1: "third",
-  },
-  {
-    title: "What we do",
-    paragraph:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae impedit nesciunt laboriosam. Deserunt a molestias nihil commodi, molestiae fugit facilis",
-
-    exp1: "fouth",
-  },
-];
-
-function About(props) {
+function About() {
+  const [aboutUsData, setAboutUsData] = useState(data);
   return (
     <AboutStyled>
       <AboutHeader>
@@ -43,22 +14,7 @@ function About(props) {
         <p>little information</p>
       </AboutHeader>
       <AboutInfo>
-        <MainAbtcard
-          title={AboutData[0].title}
-          paragraph={AboutData[0].paragraph}
-        />
-        <MainAbtcard
-          title={AboutData[1].title}
-          paragraph={AboutData[1].paragraph}
-        />
-        <MainAbtcard
-          title={AboutData[2].title}
-          paragraph={AboutData[2].paragraph}
-        />
-        <MainAbtcard
-          title={AboutData[3].title}
-          paragraph={AboutData[3].paragraph}
-        />
+        <MainAbtcard aboutUsInfo={aboutUsData} />
       </AboutInfo>
     </AboutStyled>
   );
