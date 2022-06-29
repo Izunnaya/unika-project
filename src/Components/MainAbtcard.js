@@ -1,19 +1,27 @@
 import { React } from "react";
 import styled from "styled-components";
 
-const MainAbtcard = ({ aboutUsInfo }) => {
-  // const aboutUsInfo = props.aboutUsInfo;
+const MainAbtcard = ({ aboutUsInfo, handleDelete }) => {
   return (
     <MainAbtCardsStyle>
       <MainAbtcards>
         {aboutUsInfo.map((eachInfo) => {
           return (
             <>
-              <i className="fa-solid fa-diamond"></i>;
-              <div className="CardMessage" key={eachInfo.id}>
+              <i className="fa-solid fa-diamond"></i>
+              <CardMessage key={eachInfo.id}>
                 <h2>{eachInfo.title}</h2>
                 <p>{eachInfo.paragraph}</p>
-              </div>
+                <button
+                  className="single-button"
+                  onClick={() => {
+                    handleDelete(eachInfo.id);
+                  }}
+                >
+                  Click to remove This block
+                </button>
+                <button className="all-btn">Remove All blocks</button>
+              </CardMessage>
             </>
           );
         })}
@@ -27,26 +35,41 @@ const MainAbtCardsStyle = styled.div`
   }
 
   cursor: pointer;
-
-  &:hover {
-    opacity: 0.9;
-  }
 `;
 const MainAbtcards = styled.div`
   width: 100%;
   display: flex;
+  gap: 5px;
   justify-content: center;
   opacity: 0.7;
+`;
 
-  .CardMessage {
-    margin-left: 20px;
+const CardMessage = styled.div`
+  margin-left: 10px;
+  width: 100%;
+  margin-left: 20px;
 
-    p {
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-    h2 {
-    }
+  p {
+    font-size: 0.8rem;
+    line-height: 1.4;
+  }
+  h2 {
+  }
+  h2 {
+    margin-bottom: 7px;
+  }
+  &:hover {
+    opacity: 0.9;
+  }
+
+  .single-button {
+    border: none;
+    margin-bottom: 1.1rem;
+    padding: 6px 10px;
+    border-radius: 7px;
+    font-weight: bold;
+    text-transform: capitalize;
+    cursor: pointer;
   }
 `;
 
