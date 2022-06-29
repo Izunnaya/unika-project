@@ -1,7 +1,7 @@
 import { React } from "react";
 import styled from "styled-components";
 
-const MainAbtcard = ({ aboutUsInfo, handleDelete }) => {
+const MainAbtcard = ({ aboutUsInfo, handleDelete, deleteAllHandler }) => {
   return (
     <MainAbtCardsStyle>
       <MainAbtcards>
@@ -20,7 +20,9 @@ const MainAbtcard = ({ aboutUsInfo, handleDelete }) => {
                 >
                   Click to remove This block
                 </button>
-                <button className="all-btn">Remove All blocks</button>
+                <button className="all-btn" onClick={deleteAllHandler}>
+                  Remove All blocks
+                </button>
               </CardMessage>
             </>
           );
@@ -62,7 +64,7 @@ const CardMessage = styled.div`
     opacity: 0.9;
   }
 
-  .single-button {
+  button {
     border: none;
     margin-bottom: 1.1rem;
     padding: 6px 10px;
@@ -70,6 +72,10 @@ const CardMessage = styled.div`
     font-weight: bold;
     text-transform: capitalize;
     cursor: pointer;
+
+    &.single-button {
+      margin-right: 7px;
+    }
   }
 `;
 

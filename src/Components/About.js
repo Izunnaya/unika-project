@@ -6,6 +6,13 @@ import { data } from "../../src/AboutUsData";
 
 function About() {
   const [aboutUsData, setAboutUsData] = useState(data);
+
+  //Click even for deleting all blogs
+  const deleteAllHandler = () => {
+    setAboutUsData([]);
+  };
+
+  // click Event for deleting single items
   const handleDelete = (id) => {
     const newData = aboutUsData.filter((eachInfo) => eachInfo.id !== id);
     setAboutUsData(newData);
@@ -18,7 +25,11 @@ function About() {
         <p>little information</p>
       </AboutHeader>
       <AboutInfo>
-        <MainAbtcard aboutUsInfo={aboutUsData} handleDelete={handleDelete} />
+        <MainAbtcard
+          aboutUsInfo={aboutUsData}
+          handleDelete={handleDelete}
+          deleteAllHandler={deleteAllHandler}
+        />
       </AboutInfo>
     </AboutStyled>
   );
